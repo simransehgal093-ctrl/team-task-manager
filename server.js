@@ -1,3 +1,6 @@
+const User = require("./User");
+const Project = require("./Project");
+const Task = require("./Task");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors"); 
