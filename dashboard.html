@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2><center>Team Task Manager</center> </h2>
+<div class="main">
+  <h3>Dashboard </h3>
+  <div class="stats-container">
+    <div class="stat-card">
+      <p>Total Tasks</p>
+      <h2 id="totalCount">0</h2>
+    </div>
+    <div class="stat-card">
+      <p>To Do</p>
+      <h2 id="todoCount">0</h2>
+    </div>
+    <div class="stat-card">
+      <p>Done</p>
+      <h2 id="doneCount">0</h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="card">
+    <h3>Create Project</h3>
+    <input id="projectName" placeholder="Project Name">
+    <button onclick="createProject()">Create Project</button>
+  </div>
+  <div class="card">
+    <h3>Create Task</h3>
+    <input id="taskTitle" placeholder="Title"><br>
+    <input id="taskDesc" placeholder="Description"><br>
+    <input id="assignedTo" placeholder="Assign Email"><br>
+    <input id="projectId" placeholder="Project ID"><br>
+
+    <button onclick="createTask()">Create Task</button>
+  </div>
+
+</div>
+
+<!-- ===== this is the task list ===== -->
+<h3><center>All Tasks</center></h3>
+<div id="taskList"></div>
+<button onclick="loadTasks()">Refresh Tasks</button>
+<script src="script.js"></script>
+
+<script>
+  loadTasks();
+  loadStats();
+</script>
+<script>
+  loadTasks();
+  loadStats();
+</script>
+</body>
+</html>
