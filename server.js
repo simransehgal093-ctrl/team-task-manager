@@ -158,6 +158,11 @@ app.post("/delete-task", async (req, res) => {
     res.status(500).send("Error");
   }
 });
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+const path = require("path");
+app.use(express.static(path.join(__dirname)));
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
